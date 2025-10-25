@@ -15,7 +15,7 @@ class ApiService {
         final List<dynamic> articlesJson = json['articles'];
         return articlesJson.map((json) => Article.fromJson(json)).toList();
       } else {
-        throw Exception('Failed to load articles');
+        throw Exception('Gagal memuat artikel');
       }
     } catch (e) {
       throw Exception('Gagal terhubung ke Server: $e');
